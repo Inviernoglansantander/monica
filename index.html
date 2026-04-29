@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invierno Glan Santander | Moda Exclusiva para Damas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Plus+Jakarta+Sans:wght@300;400;600&display=swap');
+        
+        :root {
+            --gelido: #f0f4f8;
+            --nieve: #ffffff;
+            --noche: #1a2a3a;
+            --oro: #d4af37;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+        }
+
+        .hero-gradient {
+            background: linear-gradient(rgba(26, 42, 58, 0.6), rgba(26, 42, 58, 0.4)), url('https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&q=80&w=1920');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .card-zoom:hover img {
+            transform: scale(1.05);
+        }
+
+        .input-focus:focus {
+            outline: none;
+            border-color: #d4af37;
+            box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-[#f8fafc] text-[#1a2a3a]">
+
+    <!-- Navegación -->
+    <nav class="fixed w-full z-50 glass-nav border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex-shrink-0 flex items-center">
+                    <span class="text-2xl font-bold tracking-tighter text-[#1a2a3a]">
+                        INVIERNO <span class="text-[#d4af37]">GLAN</span>
+                    </span>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8 font-medium">
+                        <a href="#inicio" class="hover:text-[#d4af37] transition-colors">Inicio</a>
+                        <a href="#coleccion" class="hover:text-[#d4af37] transition-colors">Colección</a>
+                        <a href="#nosotros" class="hover:text-[#d4af37] transition-colors">Sobre Nosotros</a>
+                        <a href="#contacto" class="bg-[#1a2a3a] text-white px-6 py-2 rounded-full hover:bg-[#d4af37] transition-all">Contacto</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button class="text-2xl"><i class="fas fa-bars"></i></button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sección Hero -->
+    <section id="inicio" class="hero-gradient h-screen flex items-center justify-center text-center text-white px-4">
+        <div class="max-w-3xl space-y-6 animate-fade-in">
+            <h1 class="text-5xl md:text-7xl font-bold mb-4">Elegancia que desafía al frío</h1>
+            <p class="text-xl md:text-2xl font-light opacity-90">Descubre la colección exclusiva de Invierno Glan Santander diseñada para la mujer moderna.</p>
+            <div class="pt-8">
+                <a href="#coleccion" class="bg-[#d4af37] text-white px-10 py-4 rounded-full text-lg font-semibold hover:bg-white hover:text-[#1a2a3a] transition-all duration-300">
+                    Ver Colección <i class="fas fa-chevron-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Colección -->
+    <section id="coleccion" class="py-24 max-w-7xl mx-auto px-4">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl font-bold mb-4">Nuestra Colección</h2>
+            <div class="w-24 h-1 bg-[#d4af37] mx-auto mb-6"></div>
+            <p class="text-gray-600 max-w-2xl mx-auto text-lg text-center">Prendas seleccionadas cuidadosamente por Monica Laura Santander para ofrecerte calidez y estilo sin compromisos.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-white rounded-2xl overflow-hidden shadow-lg card-zoom group transition-all duration-300 hover:shadow-2xl">
+                <div class="relative h-96 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1539533018447-63fcce2678e3?auto=format&fit=crop&q=80&w=800" alt="Abrigo de Lana" class="w-full h-full object-cover transition-transform duration-500">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-2xl font-bold mb-2">Abrigos de Gala</h3>
+                    <p class="text-gray-500 mb-4">Lana pura y cortes asimétricos para un look sofisticado.</p>
+                    <button onclick="prellenarFormulario('Abrigo de Gala')" class="text-[#d4af37] font-semibold hover:underline">Consultar por WhatsApp →</button>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-2xl overflow-hidden shadow-lg card-zoom group transition-all duration-300 hover:shadow-2xl">
+                <div class="relative h-96 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1520903920243-00d872a2d1c9?auto=format&fit=crop&q=80&w=800" alt="Accesorios Invierno" class="w-full h-full object-cover transition-transform duration-500">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-2xl font-bold mb-2">Bufandas & Pashminas</h3>
+                    <p class="text-gray-500 mb-4">Suavidad extrema y colores tendencia de esta temporada.</p>
+                    <button onclick="prellenarFormulario('Bufandas & Pashminas')" class="text-[#d4af37] font-semibold hover:underline">Consultar por WhatsApp →</button>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-2xl overflow-hidden shadow-lg card-zoom group transition-all duration-300 hover:shadow-2xl">
+                <div class="relative h-96 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?auto=format&fit=crop&q=80&w=800" alt="Guantes y Botas" class="w-full h-full object-cover transition-transform duration-500">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-2xl font-bold mb-2">Accesorios Premium</h3>
+                    <p class="text-gray-500 mb-4">El detalle final para un conjunto invernal perfecto.</p>
+                    <button onclick="prellenarFormulario('Accesorios Premium')" class="text-[#d4af37] font-semibold hover:underline">Consultar por WhatsApp →</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formulario de Contacto -->
+    <section id="contacto" class="py-24 bg-white">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold mb-4">¿Tienes alguna duda?</h2>
+                <p class="text-gray-600">Completa el formulario y te responderemos directamente por WhatsApp.</p>
+            </div>
+            <div class="bg-[#f0f4f8] p-8 rounded-3xl shadow-inner border border-gray-100">
+                <form id="whatsappForm" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="space-y-2">
+                        <label class="block text-sm font-semibold text-gray-700">Nombre Completo</label>
+                        <input type="text" id="nombre" required placeholder="Tu nombre" class="w-full p-4 rounded-xl border border-gray-200 input-focus">
+                    </div>
+                    <div class="space-y-2">
+                        <label class="block text-sm font-semibold text-gray-700">Producto de interés</label>
+                        <select id="producto" class="w-full p-4 rounded-xl border border-gray-200 input-focus">
+                            <option value="General">Consulta General</option>
+                            <option value="Abrigo de Gala">Abrigo de Gala</option>
+                            <option value="Bufandas & Pashminas">Bufandas & Pashminas</option>
+                            <option value="Accesorios Premium">Accesorios Premium</option>
+                        </select>
+                    </div>
+                    <div class="md:col-span-2 space-y-2">
+                        <label class="block text-sm font-semibold text-gray-700">Mensaje adicional</label>
+                        <textarea id="mensaje" rows="4" placeholder="Cuéntanos qué necesitas..." class="w-full p-4 rounded-xl border border-gray-200 input-focus"></textarea>
+                    </div>
+                    <div class="md:col-span-2 text-center pt-4">
+                        <button type="submit" class="bg-[#25d366] text-white px-12 py-4 rounded-full text-lg font-bold shadow-lg hover:bg-green-600 transition-all flex items-center justify-center mx-auto space-x-2">
+                            <i class="fab fa-whatsapp"></i>
+                            <span>Enviar a WhatsApp</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Sobre Nosotros -->
+    <section id="nosotros" class="bg-[#1a2a3a] text-white py-24">
+        <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+            <div class="rounded-3xl overflow-hidden shadow-2xl h-[500px]">
+                <img src="https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?auto=format&fit=crop&q=80&w=800" alt="Monica Laura Santander" class="w-full h-full object-cover">
+            </div>
+            <div class="space-y-6">
+                <h2 class="text-4xl font-bold text-[#d4af37]">Nuestra Historia</h2>
+                <p class="text-xl leading-relaxed opacity-90">
+                    Bajo la visión de <strong>Monica Laura Santander</strong>, "Invierno Glan Santander" nació con la misión de empoderar a la mujer a través de la moda, incluso en los climas más fríos.
+                </p>
+                <div class="flex space-x-6 pt-4">
+                    <div class="text-center">
+                        <span class="block text-3xl font-bold text-[#d4af37]">100%</span>
+                        <span class="text-sm">Calidad Premium</span>
+                    </div>
+                    <div class="text-center">
+                        <span class="block text-3xl font-bold text-[#d4af37]">Personal</span>
+                        <span class="text-sm">Atención Única</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white py-16 border-t border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-8">Conéctate con Nosotros</h2>
+            <div class="flex justify-center space-x-8 mb-12">
+                <a href="https://facebook.com/masquetecnologia" target="_blank" class="text-3xl text-blue-600 hover:scale-110 transition-transform">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="https://instagram.com/masquetecnologia" target="_blank" class="text-3xl text-pink-500 hover:scale-110 transition-transform">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+            <p class="text-gray-500 mb-4">© 2024 Invierno Glan Santander. Propietaria: Monica Laura Santander</p>
+        </div>
+    </footer>
+
+    <!-- Botón Flotante WhatsApp -->
+    <a href="https://wa.me/59162539934" target="_blank" 
+       class="fixed bottom-8 right-8 bg-[#25d366] text-white w-16 h-16 rounded-full flex items-center justify-center text-3xl shadow-2xl hover:scale-110 transition-all z-50">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        // Función para prellenar el formulario desde la colección
+        function prellenarFormulario(producto) {
+            document.getElementById('producto').value = producto;
+            document.getElementById('contacto').scrollIntoView({ behavior: 'smooth' });
+            document.getElementById('nombre').focus();
+        }
+
+        // Manejo del envío del formulario a WhatsApp
+        document.getElementById('whatsappForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const nombre = document.getElementById('nombre').value;
+            const producto = document.getElementById('producto').value;
+            const mensaje = document.getElementById('mensaje').value;
+            const telefono = "59162539934";
+
+            const textoMsg = `Hola Monica! Mi nombre es ${nombre}. Estoy interesada en: *${producto}*. ${mensaje ? `Mi consulta es: ${mensaje}` : "Quisiera recibir más detalles."}`;
+            
+            // Codificar el mensaje para URL
+            const url = `https://wa.me/${telefono}?text=${encodeURIComponent(textoMsg)}`;
+            
+            // Abrir WhatsApp
+            window.open(url, '_blank');
+        });
+
+        // Animaciones de scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
