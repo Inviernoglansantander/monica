@@ -45,6 +45,11 @@
             border-color: #d4af37;
             box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.2);
         }
+
+        /* Estilos para el acordeón de Ayuda */
+        .faq-item[open] summary i {
+            transform: rotate(180deg);
+        }
     </style>
 </head>
 <body class="bg-[#f8fafc] text-[#1a2a3a]">
@@ -59,17 +64,28 @@
                     </span>
                 </div>
                 <div class="hidden md:block">
-                    <div class="ml-10 flex items-baseline space-x-8 font-medium">
+                    <div class="ml-10 flex items-baseline space-x-6 font-medium">
                         <a href="#inicio" class="hover:text-[#d4af37] transition-colors">Inicio</a>
                         <a href="#coleccion" class="hover:text-[#d4af37] transition-colors">Colección</a>
-                        <a href="#nosotros" class="hover:text-[#d4af37] transition-colors">Sobre Nosotros</a>
+                        <a href="#ayuda" class="hover:text-[#d4af37] transition-colors">Ayuda</a>
+                        <a href="#nosotros" class="hover:text-[#d4af37] transition-colors">Nosotros</a>
                         <a href="#contacto" class="bg-[#1a2a3a] text-white px-6 py-2 rounded-full hover:bg-[#d4af37] transition-all">Contacto</a>
                     </div>
                 </div>
                 <div class="md:hidden">
-                    <button class="text-2xl"><i class="fas fa-bars"></i></button>
+                    <button class="text-2xl" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+                        <i class="fas fa-bars"></i>
+                    </button>
                 </div>
             </div>
+        </div>
+        <!-- Menú Móvil -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-gray-100 p-4 space-y-4">
+            <a href="#inicio" class="block font-medium">Inicio</a>
+            <a href="#coleccion" class="block font-medium">Colección</a>
+            <a href="#ayuda" class="block font-medium">Ayuda</a>
+            <a href="#nosotros" class="block font-medium">Nosotros</a>
+            <a href="#contacto" class="block font-medium text-[#d4af37]">Contacto</a>
         </div>
     </nav>
 
@@ -97,7 +113,7 @@
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div class="bg-white rounded-2xl overflow-hidden shadow-lg card-zoom group transition-all duration-300 hover:shadow-2xl">
                 <div class="relative h-96 overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1539533018447-63fcce2678e3?auto=format&fit=crop&q=80&w=800" alt="Abrigo de Lana" class="w-full h-full object-cover transition-transform duration-500">
+                    <img src="https://images.unsplash.com/photo-1539533018447-63fcce2678e3?auto=format&fit=crop&q=80&w=800" alt="[Imagen de Abrigo de Lana]" class="w-full h-full object-cover transition-transform duration-500">
                 </div>
                 <div class="p-6">
                     <h3 class="text-2xl font-bold mb-2">Abrigos de Gala</h3>
@@ -108,7 +124,7 @@
 
             <div class="bg-white rounded-2xl overflow-hidden shadow-lg card-zoom group transition-all duration-300 hover:shadow-2xl">
                 <div class="relative h-96 overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1520903920243-00d872a2d1c9?auto=format&fit=crop&q=80&w=800" alt="Accesorios Invierno" class="w-full h-full object-cover transition-transform duration-500">
+                    <img src="https://images.unsplash.com/photo-1520903920243-00d872a2d1c9?auto=format&fit=crop&q=80&w=800" alt="[Imagen de Accesorios de Invierno]" class="w-full h-full object-cover transition-transform duration-500">
                 </div>
                 <div class="p-6">
                     <h3 class="text-2xl font-bold mb-2">Bufandas & Pashminas</h3>
@@ -119,13 +135,65 @@
 
             <div class="bg-white rounded-2xl overflow-hidden shadow-lg card-zoom group transition-all duration-300 hover:shadow-2xl">
                 <div class="relative h-96 overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?auto=format&fit=crop&q=80&w=800" alt="Guantes y Botas" class="w-full h-full object-cover transition-transform duration-500">
+                    <img src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?auto=format&fit=crop&q=80&w=800" alt="[Imagen de Guantes y Botas]" class="w-full h-full object-cover transition-transform duration-500">
                 </div>
                 <div class="p-6">
                     <h3 class="text-2xl font-bold mb-2">Accesorios Premium</h3>
                     <p class="text-gray-500 mb-4">El detalle final para un conjunto invernal perfecto.</p>
                     <button onclick="prellenarFormulario('Accesorios Premium')" class="text-[#d4af37] font-semibold hover:underline">Consultar por WhatsApp →</button>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Ayuda (FAQ) -->
+    <section id="ayuda" class="py-24 bg-[#f0f4f8]">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <span class="text-[#d4af37] font-bold tracking-widest uppercase text-sm">Centro de Ayuda</span>
+                <h2 class="text-4xl font-bold mt-2">Preguntas Frecuentes</h2>
+                <div class="w-24 h-1 bg-[#d4af37] mx-auto mt-4"></div>
+            </div>
+
+            <div class="space-y-4">
+                <details class="faq-item group bg-white p-6 rounded-2xl shadow-sm cursor-pointer transition-all">
+                    <summary class="flex justify-between items-center font-bold text-lg list-none">
+                        ¿Cómo puedo saber mi talla ideal?
+                        <i class="fas fa-chevron-down text-[#d4af37] transition-transform"></i>
+                    </summary>
+                    <p class="mt-4 text-gray-600 leading-relaxed">
+                        Contamos con una guía de tallas personalizada. Puedes enviarnos tus medidas por WhatsApp y nosotros te recomendaremos la prenda que mejor se adapte a tu figura.
+                    </p>
+                </details>
+
+                <details class="faq-item group bg-white p-6 rounded-2xl shadow-sm cursor-pointer transition-all">
+                    <summary class="flex justify-between items-center font-bold text-lg list-none">
+                        ¿Hacen envíos a todo el país?
+                        <i class="fas fa-chevron-down text-[#d4af37] transition-transform"></i>
+                    </summary>
+                    <p class="mt-4 text-gray-600 leading-relaxed">
+                        Sí, realizamos envíos seguros a nivel nacional. El tiempo de entrega suele ser de 2 a 5 días hábiles dependiendo de tu ubicación.
+                    </p>
+                </details>
+
+                <details class="faq-item group bg-white p-6 rounded-2xl shadow-sm cursor-pointer transition-all">
+                    <summary class="flex justify-between items-center font-bold text-lg list-none">
+                        ¿Cómo debo cuidar mis prendas de lana?
+                        <i class="fas fa-chevron-down text-[#d4af37] transition-transform"></i>
+                    </summary>
+                    <p class="mt-4 text-gray-600 leading-relaxed">
+                        Recomendamos el lavado en seco o a mano con agua fría y detergente suave. Evita el uso de secadora para mantener la suavidad y forma original de las fibras.
+                    </p>
+                </details>
+            </div>
+
+            <div class="mt-12 p-8 bg-[#1a2a3a] rounded-3xl text-center text-white">
+                <h3 class="text-2xl font-bold mb-4 text-[#d4af37]">¿Aún necesitas ayuda?</h3>
+                <p class="mb-6 opacity-80">Nuestro equipo de soporte está disponible para atenderte personalmente.</p>
+                <a href="https://wa.me/59162539934?text=Hola,%20necesito%20ayuda%20con%20una%20compra" target="_blank" class="inline-flex items-center space-x-2 bg-white text-[#1a2a3a] px-8 py-3 rounded-full font-bold hover:bg-[#d4af37] hover:text-white transition-all">
+                    <i class="fab fa-whatsapp"></i>
+                    <span>Hablar con Soporte</span>
+                </a>
             </div>
         </div>
     </section>
@@ -171,7 +239,7 @@
     <section id="nosotros" class="bg-[#1a2a3a] text-white py-24">
         <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
             <div class="rounded-3xl overflow-hidden shadow-2xl h-[500px]">
-                <img src="https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?auto=format&fit=crop&q=80&w=800" alt="Monica Laura Santander" class="w-full h-full object-cover">
+                <img src="https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?auto=format&fit=crop&q=80&w=800" alt="[Imagen de Monica Laura Santander]" class="w-full h-full object-cover">
             </div>
             <div class="space-y-6">
                 <h2 class="text-4xl font-bold text-[#d4af37]">Nuestra Historia</h2>
@@ -215,32 +283,23 @@
     </a>
 
     <script>
-        // Función para prellenar el formulario desde la colección
         function prellenarFormulario(producto) {
             document.getElementById('producto').value = producto;
             document.getElementById('contacto').scrollIntoView({ behavior: 'smooth' });
             document.getElementById('nombre').focus();
         }
 
-        // Manejo del envío del formulario a WhatsApp
         document.getElementById('whatsappForm').addEventListener('submit', function(e) {
             e.preventDefault();
-            
             const nombre = document.getElementById('nombre').value;
             const producto = document.getElementById('producto').value;
             const mensaje = document.getElementById('mensaje').value;
             const telefono = "59162539934";
-
             const textoMsg = `Hola Monica! Mi nombre es ${nombre}. Estoy interesada en: *${producto}*. ${mensaje ? `Mi consulta es: ${mensaje}` : "Quisiera recibir más detalles."}`;
-            
-            // Codificar el mensaje para URL
             const url = `https://wa.me/${telefono}?text=${encodeURIComponent(textoMsg)}`;
-            
-            // Abrir WhatsApp
             window.open(url, '_blank');
         });
 
-        // Animaciones de scroll
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
